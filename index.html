@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="card">
+      <div id="star">
+        <img src="./images/icon-star.svg" alt="" />
+      </div>
+      <div id="content">
+        <h2 id="title">How did we do?</h2>
+        <p id="desc">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <div id="rate">
+        <button class="score" value="1">1</button>
+        <button class="score" value="2">2</button>
+        <button class="score" value="3">3</button>
+        <button class="score" value="4">4</button>
+        <button class="score" value="5">5</button>
+      </div>
+      <button onclick="nextPage()" id="submit">submit</button>
+    </div>
+  </body>
+  <script>
+    var scoreList = document.getElementsByClassName("score");
+    for (var i = 0; i < scoreList.length; i++) {
+      scoreList[i].addEventListener("blur", function(e) {
+        localStorage.setItem('score', e.target.value);
+      });
+    }
+
+    function nextPage() {
+      window.location.href = "thanks.html";
+    }
+  </script>
+</html>
