@@ -14,49 +14,51 @@
 
     <title>Frontend Mentor | Interactive rating component</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="myscript.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="card">
-      <div id="first-page">
-        <div class="star">
-          <img src="./images/icon-star.svg" alt="icon star" />
+    <main>
+      <div class="card">
+        <div id="first-page">
+          <div class="star">
+            <img src="./images/icon-star.svg" alt="icon star" />
+          </div>
+          <div class="content">
+            <h2 class="title-1">How did we do?</h2>
+            <p class="desc-1">
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don’t hesitate to get in touch!
+            </p>
+          </div>
+          <div class="rate">
+            <button class="score" value="1">1</button>
+            <button class="score" value="2">2</button>
+            <button class="score" value="3">3</button>
+            <button class="score" value="4">4</button>
+            <button class="score" value="5">5</button>
+          </div>
+          <button onclick="nextPage()" class="submit">submit</button>
         </div>
-        <div class="content">
-          <h2 class="title-1">How did we do?</h2>
-          <p class="desc-1">
-            We appreciate you taking the time to give a rating. If you ever need
-            more support, don’t hesitate to get in touch!
-          </p>
-        </div>
-        <div class="rate">
-          <button class="score" value="1">1</button>
-          <button class="score" value="2">2</button>
-          <button class="score" value="3">3</button>
-          <button class="score" value="4">4</button>
-          <button class="score" value="5">5</button>
-        </div>
-        <button onclick="nextPage()" class="submit">submit</button>
-      </div>
-      <div id="second-page">
-        <div class="thanks">
-          <img src="./images/illustration-thank-you.svg" alt="" />
-          <div class="text">
-            <p>You selected out <span id="rating"></span> of 5</p>
+        <div id="second-page">
+          <div class="thanks">
+            <img src="./images/illustration-thank-you.svg" alt="" />
+            <div class="text">
+              <p>You selected out <span id="rating"></span> of 5</p>
+            </div>
+          </div>
+          <div class="content">
+            <h2 class="title-2">Thank You!</h2>
+            <p class="desc-2">
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don’t hesitate to get in touch!
+            </p>
           </div>
         </div>
-        <div class="content">
-          <h2 class="title-2">Thank You!</h2>
-          <p class="desc-2">
-            We appreciate you taking the time to give a rating. If you ever need
-            more support, don’t hesitate to get in touch!
-          </p>
-        </div>
       </div>
-    </div>
+    </main>
   </body>
+  <script src="myscript.js"></script>
 </html>
